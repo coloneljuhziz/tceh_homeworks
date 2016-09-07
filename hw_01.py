@@ -25,8 +25,6 @@ while i <= 5:
         elif n == 5:
             print('Работа программы окончена. Вы ответили правильно на ' + str(n) + ' вопросов.')
         break
-    else:
-        pass
     print(q[i])
     ans = input()
     if ans == a[i]:
