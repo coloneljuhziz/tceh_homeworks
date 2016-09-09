@@ -16,7 +16,7 @@ a = [
     'complex()'
     ]
 
-for i in range(len(q)):
+for i, count in enumerate(q):
     print(q[i])
     if input() == a[i]:
         n += 1
@@ -29,9 +29,11 @@ for i in range(len(q)):
     else:
         print('Это неправильный ответ\n')
 
-if n == 1:
-    print('Работа программы окончена. Вы ответили правильно на ' + str(n) + ' вопрос.')
-elif n >= 2 and n <=4:
-    print('Работа программы окончена. Вы ответили правильно на ' + str(n) + ' вопроса.')
-elif n == 5:
-    print('Работа программы окончена. Вы ответили правильно на ' + str(n) + ' вопросов.')
+if n >= 11 and n <= 19 or n % 100 >= 11 and n % 100 <= 19 or n >= 5 and n <= 9 or n % 10 >= 5 and n % 10 <= 9:
+    ending = ' вопросов.'
+elif n == 1 or n % 10 == 1:
+    ending = ' вопрос.'
+elif n >= 2 and n <=4 or n % 10 >= 2 and n % 10 <= 4:
+    ending = ' вопроса.'
+
+print('Работа программы окончена. Вы ответили правильно на ' + str(n) + ending)
