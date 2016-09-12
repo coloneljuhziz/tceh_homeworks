@@ -22,7 +22,7 @@ for i, task in enumerate(q):
     else:
         print('Это неправильный ответ\n')
 
-if n >= 11 and n <= 19 or n % 100 >= 11 and n % 100 <= 19 or n >= 5 and n <= 9 or n % 10 >= 5 and n % 10 <= 9:
+if n % 100 > 10 and n % 100 < 20 or n >= 5 and n <= 9 or n % 10 >= 5 and n % 10 <= 9:
     ending = ' вопросов.'
 elif n == 1 or n % 10 == 1:
     ending = ' вопрос.'
