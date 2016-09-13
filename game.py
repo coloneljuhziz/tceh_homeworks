@@ -20,9 +20,9 @@ MOVES = {
 
 def shuffle_field():
     field = [
-        ' 1', ' 2', ' 3', ' 4',
-        ' 5', ' 6', ' 7', ' 8',
-        ' 9', '10', '11', '12',
+        '01', '02', '03', '04',
+        '05', '06', '07', '08',
+        '09', '10', '11', '12',
         '13', '14', '15', EMPTY_MARK
     ]
     m = 1
@@ -54,9 +54,9 @@ def print_field(field):
 
 def is_game_finished(field):
     field_solved = [
-        ' 1', ' 2', ' 3', ' 4',
-        ' 5', ' 6', ' 7', ' 8',
-        ' 9', '10', '11', '12',
+        '01', '02', '03', '04',
+        '05', '06', '07', '08',
+        '09', '10', '11', '12',
         '13', '14', '15', EMPTY_MARK
     ]
 
@@ -113,7 +113,7 @@ def main():
             perform_move(field, key)
             steps += 1
             print_field(field)
-            if is_game_finished(field) == True:
+            if is_game_finished(field):
                 print('Congrats! You have solved this puzzle in ' + steps + 'steps!')
                 break
             else:
