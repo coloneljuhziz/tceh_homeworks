@@ -25,7 +25,23 @@ def shuffle_field():
         ' 9', '10', '11', '12',
         '13', '14', '15', EMPTY_MARK
     ]
+    m = 1
+    n = 0
+    e = 0
     random.shuffle(field)
+    while (n + e) % 2 != 0:
+        for i in range(len(field)):
+            if (i + m) > 15:
+                m = 15 - i
+            if field[i] > field[i + m]:
+                m += 1
+                n += 1
+            elif field[i] < field[i + m]:
+                m += 1
+            elif field[i] < field[i + m]:
+                e = field.index(' x')
+        if (n + e) % 2 == 1:
+            random.shuffle(field)
     return field
 
 
@@ -98,9 +114,10 @@ def handle_user_input():
 def main():
     field = shuffle_field()
     print_field(field)
-    key = handle_user_input()
-    perform_move(field, key)
-    print_field(field)
+    while True:
+        key = handle_user_input()
+        perform_move(field, key)
+        print_field(field)
 
 
 if __name__ == '__main__':
