@@ -54,7 +54,7 @@ def read():
         p = Post(name=d['name'], text=d['text'], header=d['header'], time=d['time'])
         p.id = d['id']
         print(p)
-        # think about algorythm
+        ## think about algorythm
         if p.id >= last_id:
             last_id = p.id + 1
 

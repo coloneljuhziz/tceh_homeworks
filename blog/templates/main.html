@@ -16,6 +16,7 @@
 </form>
 
 
+
 {% for post in posts %}
     <h1>{{ post.header }}</h1>
     <p>{{ post.show_preview(16) }} <a href="/post/{{ post.id }}">Read more</a></p>
