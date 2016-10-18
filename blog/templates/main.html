@@ -1,0 +1,27 @@
+<form method="post" action="/post_entry">
+    Header:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="post_header" type="text" placeholder="enter post header here" style="width: 300px;" />
+    <br/>
+    <br/>
+    Text post:&nbsp;&nbsp;<input name="post_body" type="text" placeholder="enter post text here" style="width: 300px; height: 100px;" />
+    <br/>
+    <br/>
+    Author:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="post_author" type="text" placeholder="enter author's name here" style="width: 300px;" />
+    <br/>
+    <br/>
+    <input type="submit">
+    <br/>
+    <br/>
+    <br/>
+    <hr/>
+</form>
+
+
+
+{% for post in posts %}
+    <h1>{{ post.header }}</h1>
+    <p>{{ post.show_preview(16) }} <a href="/post/{{ post.id }}">Read more</a></p>
+    <p><i>Author: {{ post.name }}</i></p>
+    <p>{{ post.time }}</p>
+    <br/>
+    <hr/>
+{% endfor %}

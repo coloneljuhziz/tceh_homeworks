@@ -1,0 +1,7 @@
+{% if error_message is none %}
+    <meta http-equiv="refresh" content="3; url=/" />
+    <p>Post successfully added!=)</p>
+{% else %}
+    <meta http-equiv="refresh" content="3; url=/" />
+    {{ error_message }}
+{% endif %}
