@@ -1,17 +1,18 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>QR-Code Simple Generator</title>-->
-<!--</head>-->
-<!--<body>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR-Code Simple Generator</title>
+</head>
+<body>
     <form method="post" action="/">
-        Enter your text here: <input name="user_string" type="text" value="Some text!">
+        Enter your text here: <input name="user_string" type="text" placeholder="Some text!">
         <input type="submit">
     </form>
-    <input type="submit">
     <br/>
     <br/>
-    <h1>User string: {{ qrcode.text }} </h1>
-<!--</body>-->
-<!--</html>-->
+    <h1>User string: {{ qr_string }} </h1>
+    <img src="/user_gen_qrcode.png" alt="user_gen_qrcode.png">
+
+</body>
+</html>
